@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import java.util.Date;
 
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -114,6 +115,7 @@ class HackerDetectionSystemApplicationTests {
 		 .andExpect(content().string("5.5.5.5"));
 	}
 	
+	@Order(1)
 	@Test
 	void testFifthSigninFailureAfter4Minutes() throws Exception {
 		

@@ -1,4 +1,4 @@
-package com.hackertest.repo;
+package com.hackertest.dao;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
@@ -12,4 +12,6 @@ public interface SigninFailureRepo extends MongoRepository<SigninFailure, String
 	public SigninFailure save(SigninFailure signinFailure);
 	
 	public long countByIpAndTimestampGreaterThan(String ip, long timestamp);
+	
+	public SigninFailure findFirst1ByIpAndTimestampGreaterThanOrderByTimestampAsc(String ip, long timestamp);
 }
