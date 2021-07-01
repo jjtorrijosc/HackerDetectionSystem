@@ -1,7 +1,7 @@
 # HackerDetectionSystem
 
 Spring Boot application that provide a REST service with the operation 'parseLine'.
-This operation receives a String with one line of log file of a external signin process. 
+This operation receives a String with one log line of a external signin process. 
 The format of this log line is "<ip>,<date>,<action>,<username>".
   IP look like 80.238.9.179 Date is in the epoch format like 1336129471 Action is one of the following:
       SIGNIN_SUCCESS or SIGNIN_FAILURE Username is a String like Pedro.Lopez
